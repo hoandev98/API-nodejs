@@ -1,0 +1,23 @@
+version: '3.1'
+services:
+  manaty-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: manaty-api
+    volumes:
+      - .:/usr/src/app
+    ports:
+       - "8083:8082"
+    restart: always
+    
+  # android-emulator:
+  #   build:
+  #     context: .
+  #   image: android-emulator:latest
+  #   container_name: android-emulator
+  #   volumes:
+  #     - .:/usr/src/app/android
+  #   ports:
+  #      - "5555:5555"
+  #   restart: always
